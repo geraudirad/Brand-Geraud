@@ -1,0 +1,296 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+/* Pattern from https://www.transparenttextures.com/ */
+body {
+    background-color: #f0f0f0;
+    background-image: url("https://www.transparenttextures.com/patterns/arches.png");
+}
+
+.header {
+    width: 100%;
+    float: left;
+    padding-top: 0px;
+    line-height: 200px;
+}
+
+.logo {
+    width: 30%;
+    float:left;
+    text-align: center;
+}
+
+.logo img {
+    width: 20%;
+    border-radius: 100%;
+    line-height: 1.5;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.logo span {
+    font-size: 25px;
+    line-height: 1.5;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.menu {
+    width: 40%;
+    float:left;
+    font-size: 20px;
+    text-align: center;
+}
+
+.menu a {
+    text-decoration: none;
+    color: black;
+}
+
+.menu a:hover {
+    font-weight: bolder;
+}
+
+.active {
+    font-weight: bolder;
+}
+
+.signin {
+    width: 30%;
+    float:left;
+    text-align: center;
+}
+
+.signin a {
+    text-decoration: none;
+    color: white;
+    background: black;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.signin a:hover {
+    color: black;
+    background: white;
+    border: 1px solid black;
+}
+
+.introduction {
+    width: 100%;
+    float: left;
+}
+
+.hi {
+    width: 100%;
+    float: left;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.hi h1 {
+    font-size: 200px;
+}
+
+.bio {
+    width: 100%;
+    float: left;
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.bio img {
+    width: 20%;
+    border-radius: 100%;
+    margin-bottom: 20px;
+}
+
+.bio-reduced {
+    font-size: 25px;
+}
+
+.social-media {
+    width: 100%;
+    float: left;
+    text-align: center;
+    margin-bottom: 100px;
+    
+}
+.icon {
+    padding: 10px;
+}
+.icon i {
+    font-size: 40px;
+    cursor: pointer;
+}
+.contact-form{
+    margin-left: 30px;
+    margin-top: 50px;
+    font-size: large;
+}
+h2{
+margin-left: 30px
+}
+.image{
+    width: 100%;
+    margin-top: 19px;
+}
+.one-st-p {
+    float: left;
+    justify-content: flex-end;
+
+}
+
+input[type=text],input[type=password], textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  
+  input[type=submit] {
+    background-color: black;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+  }
+  
+.contact-form {
+    width: 80%;
+    margin-left: 10%;
+}
+
+.signin-form {
+    width: 30%;
+    margin-left: 35%;
+}
+
+.blog-image {
+    width: 20%;
+    float: left;
+}
+.blog-content {
+    width: 60%;
+    float: left;
+    padding: 10px;
+}
+
+.blog-list {
+    width: 100%;
+    float: left;
+}
+
+.blog-container{
+    width: 70%;
+    margin-left: 15%;
+    float: left;
+}
+
+.porfolio {
+    width: 80%;
+    margin-left: 10%;
+}
+
+.portolio-item {
+    width: 33%;
+    float: left;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.portolio-item img {
+    width: 100%;
+}
+
+/* Images */
+.slideshow-container{
+    margin-left: 10px;
+}
+#leftbox { 
+    float:left;  
+    width:80%; 
+    height:50%; 
+    margin-left: 75px;
+} 
+
+.prev,
+.next {
+        cursor: pointer;
+        position: absolute;
+        top: 60%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;   
+}
+
+ /* Position the "next button" to the right */
+ .next {
+    left: 430px;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+
+    .prev,
+    .next,
+    .text {
+        font-size: 11px
+    }
+}
