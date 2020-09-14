@@ -201,7 +201,11 @@ input[type=text],input[type=password], textarea {
     margin-left: 15%;
     float: left;
 }
-
+.blog-item{
+    float: right;
+   margin-top: -243px;
+   width: 40%;
+}
 .porfolio {
     width: 80%;
     margin-left: 10%;
@@ -294,3 +298,38 @@ input[type=text],input[type=password], textarea {
         font-size: 11px
     }
 }
+. nature {
+    float: left;
+    margin-left: 15%;
+
+}
+.comment-section {
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 50px;
+  }
+  .comment-list{
+    width:100%;
+    
+  }
+  .single-comment{
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+  
+  }
+  .comment-image{
+    width: 70px; 
+    height: 70px; 
+    display: flex;
+    border-radius: 400px; 
+    margin-right: 20px;"
+  }
+  input[type=button] {
+      background-color: #05386b;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      color: white;
+    
+  }
