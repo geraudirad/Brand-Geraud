@@ -1,10 +1,9 @@
-const articleModel = require("../models/article");
-const Validator = require("../validation");
-
-const {
+import articleModel from "../models/article";
+import {
 	validator,
 	validationErrors
-} = Validator;
+} from "../validation";
+
 
 const getAllArticles = async (req, res) => {
     try {
@@ -39,7 +38,7 @@ const getSingleArticle = async (req, res) => {
 	try {
 		const article = await articleModel.findOne({ _id: req.params.id })
 		res.status(200).send(article)
-	} catch {
+	} catch(error) {
 		res.status(404)
 		res.send({ error: "Article doesn't exist!" })
 	}
@@ -63,7 +62,7 @@ const updateArticle = async (req, res) => {
 
 		await post.save()
 		res.status(200).send(post)
-	} catch {
+	} catch(error) {
 		res.status(404)
 		res.send({ error: "Article doesn't exist!" })
 	}
@@ -74,13 +73,13 @@ const deleteArticle = async (req, res) => {
 		await articleModel.deleteOne({ _id: req.params.id })
 		res.status(204)
 		res.send({ success: "Article deleted" })
-	} catch {
+	} catch(error) {
 		res.status(404)
 		res.send({ error: "Article doesn't exist!" })
 	} 
 };
 
-module.exports = {
+export {
     getAllArticles,
     addNewArticle,
     getSingleArticle,

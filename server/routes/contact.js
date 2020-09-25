@@ -1,11 +1,9 @@
-const express = require("express")
-const contactController = require("../controllers/contact");
-const router = express.Router()
-
-const {
+import express from "express"
+import {
     getAllContact,
     addNewContact
-} = contactController;
+} from "../controllers/contact";
+const router = express.Router()
 
 // Get all contact
 router.get("/", getAllContact)
@@ -13,4 +11,4 @@ router.get("/", getAllContact)
 // Add new contact
 router.post("/", addNewContact)
 
-module.exports = router
+export default router

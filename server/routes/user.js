@@ -1,13 +1,10 @@
-const express = require("express")
-const userController = require("../controllers/user")
-const router = express.Router()
-
-const {
+import express from "express"
+import {
 	getAllUsers,
 	addNewUser,
 	login
-} = userController;
-
+} from "../controllers/user"
+const router = express.Router()
 
 // Get all users
 router.get("/", getAllUsers)
@@ -18,4 +15,4 @@ router.post("/", addNewUser)
 // Get all users
 router.post("/login", login)
 
-module.exports = router
+export default router

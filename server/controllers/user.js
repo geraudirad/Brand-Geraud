@@ -1,15 +1,11 @@
-const userModel = require("../models/user");
-const Validator = require("../validation");
-const TokenHelper = require("../helpers/token");
-
-const {
+import userModel from "../models/user";
+import {
 	validator,
 	validationErrors
-} = Validator;
-
-const {
+} from "../validation";
+import {
 	generateToken
-} = TokenHelper;
+} from "../helpers/token";
 
 const getAllUsers = async (req, res) => {
 	try {
@@ -56,7 +52,7 @@ const login = async (req, res) => {
 };
 
 
-module.exports = {
+export {
     getAllUsers,
     addNewUser,
     login
