@@ -1,19 +1,15 @@
-const express = require("express");
-const TokenHelper = require("../helpers/token");
-const ArticleController = require("../controllers/article");
-const router = express.Router()
-
-const {
+import express from "express";
+import {
     verifyToken
-} = TokenHelper;
-
-const {
+} from "../helpers/token";
+import {
 	getAllArticles,
 	addNewArticle,
 	getSingleArticle,
 	updateArticle,
 	deleteArticle
-} = ArticleController;
+} from "../controllers/article";
+const router = express.Router()
 
 // Get all articles
 router.get("/", getAllArticles)
@@ -30,4 +26,4 @@ router.patch("/:id", verifyToken, updateArticle)
 // Delete article
 router.delete("/:id", verifyToken, deleteArticle)
 
-module.exports = router
+export default router

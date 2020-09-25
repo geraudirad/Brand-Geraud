@@ -1,5 +1,5 @@
 
-const Joi = require('joi');
+import Joi from 'joi'
 
 const validator = (identifier, data) => {
     let schema = false;
@@ -50,7 +50,7 @@ const validationErrors = (res, error) => {
 };
 
 
-module.exports = {
+export {
   validator,
   validationErrors
 }
