@@ -2,12 +2,12 @@
   "name": "ft-query",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./server/index.js",
   "scripts": {
-    "test": "nyc --reporter=html --reporter=text mocha --require @babel/polyfill --require @babel/register ./tests/*.js --exit",
-    "start": "babel-node ./index.js",
-    "dev": "nodemon --exec babel-node ./index.js",
-    "cover": "istanbul cover _mocha ./tests/*.js --compilers js:babel-core/register --timeout 12000 --exit ",
+    "test": "nyc --reporter=html --reporter=text mocha --require @babel/polyfill --require @babel/register ./server/tests/*.js --exit",
+    "start": "babel-node ./server/index.js",
+    "dev": "nodemon --exec babel-node ./server/index.js",
+    "cover": "istanbul cover _mocha ./server/tests/*.js --compilers js:babel-core/register --timeout 12000 --exit ",
     "coveralls": "npm run cover -- --report lcovonly",
     "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
