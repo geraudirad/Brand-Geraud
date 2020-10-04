@@ -1,7 +1,7 @@
 import express from "express";
 import {
     verifyToken
-} from "../helpers/token";
+} from "../middleware/auth";
 import {
 	getAllArticles,
 	addNewArticle,
